@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package com.mycompany.breadthfirstpaths;
+package com.mycompany.breadthfirstpaths.common;
 
 
 // Java program to print BFS traversal from a given source vertex.
@@ -13,13 +13,13 @@ import java.util.*;
  
 // This class represents a directed graph using adjacency list
 // representation
-class Graph
+public class Graph
 {
     private int V;   // No. of vertices
     private LinkedList<Integer> adj[]; //Adjacency Lists
  
     // Constructor
-    Graph(int v)
+  public  Graph(int v)
     {
         V = v;
         adj = new LinkedList[v];
@@ -28,13 +28,13 @@ class Graph
     }
  
     // Function to add an edge into the graph
-    void addEdge(int v,int w)
+    public void addEdge(int v,int w)
     {
         adj[v].add(w);
     }
  
     // prints BFS traversal from a given source s
-    String BFS(int dau,int dich)
+    public String BFS(int dau,int dich)
     {
         String s="";
         // Mark all the vertices as not visited(By default
